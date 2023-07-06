@@ -4,7 +4,7 @@ public class SystemHandler : ISystemHandler {
     public string ListUsers() {
         UserHandler userHandler = new UserHandler();
         string user = userHandler.GetUser();
-        /*if (userHandler.IsUserAccepted(user)) {*/
+        /*if (userHandler.IsUserAccepted(user)) {*/ //TODO
         if (true) {
             try {
                 ScriptHandler scriptHandler = new ScriptHandler();
@@ -18,15 +18,15 @@ public class SystemHandler : ISystemHandler {
         return string.Empty;
     }
 
-    public string ConsultProcesses() {
+    public string ConsultProcesses(string userName) {
         UserHandler userHandler = new UserHandler();
         string user = userHandler.GetUser();
-        /*if (userHandler.IsUserAccepted(user)) {*/
+        /*if (userHandler.IsUserAccepted(user)) {*/ //TODO
         if (true) {
             try {
                 ScriptHandler scriptHandler = new ScriptHandler();
                 string scriptName = "listProcesses";
-                return scriptHandler.ExecuteScript(scriptName);
+                return scriptHandler.ExecuteScriptWParamUser(scriptName, userName);
             }
             catch (Exception e) {
                 Console.WriteLine(e);
@@ -38,7 +38,7 @@ public class SystemHandler : ISystemHandler {
     public string KillProcess(string idProceso) {
         UserHandler userHandler = new UserHandler();
         string user = userHandler.GetUser();
-        /*if (userHandler.IsUserAccepted(user)) {*/
+        /*if (userHandler.IsUserAccepted(user)) {*/ //TODO
         if (true) {
             try {
                 ScriptHandler scriptHandler = new ScriptHandler();
@@ -55,7 +55,7 @@ public class SystemHandler : ISystemHandler {
     public string PauseProcess(string idProceso) {
         UserHandler userHandler = new UserHandler();
         string user = userHandler.GetUser();
-        /*if (userHandler.IsUserAccepted(user)) {*/
+        /*if (userHandler.IsUserAccepted(user)) {*/ //TODO
         if (true) {
             try {
                 ScriptHandler scriptHandler = new ScriptHandler();
@@ -72,7 +72,7 @@ public class SystemHandler : ISystemHandler {
     public string Backup() {
         UserHandler userHandler = new UserHandler();
         string user = userHandler.GetUser();
-        /*if (userHandler.IsUserAccepted(user)) {*/
+        /*if (userHandler.IsUserAccepted(user)) {*/ //TODO
         if (true) {
             try {
                 ScriptHandler scriptHandler = new ScriptHandler();
