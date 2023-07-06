@@ -24,8 +24,6 @@ public class ScriptHandler : IScriptHandler {
         process.WaitForExit();
 
         if (!string.IsNullOrEmpty(errores)) {
-            Console.WriteLine("Error al establecer la política de ejecución de PowerShell:");
-            Console.WriteLine(errores);
             return errores;
         }
 
@@ -41,14 +39,9 @@ public class ScriptHandler : IScriptHandler {
 
         if (!string.IsNullOrEmpty(errores))
         {
-            Console.WriteLine("Errores del script:");
-            Console.WriteLine(errores);
             return errores;
         }
-        Console.WriteLine("Salida del script:");
-        Console.WriteLine(salida);
 
-        Console.ReadLine();
         return salida;
     }
 }

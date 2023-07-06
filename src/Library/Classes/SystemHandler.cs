@@ -34,6 +34,40 @@ public class SystemHandler : ISystemHandler {
         }
         return string.Empty;
     }
+    
+    public string KillProcess() {
+        UserHandler userHandler = new UserHandler();
+        string user = userHandler.GetUser();
+        /*if (userHandler.IsUserAccepted(user)) {*/
+        if (true) {
+            try {
+                ScriptHandler scriptHandler = new ScriptHandler();
+                string scriptName = "killProcess";
+                return scriptHandler.ExecuteScript(scriptName);
+            }
+            catch (Exception e) {
+                Console.WriteLine(e);
+            }
+        }
+        return string.Empty;
+    }
+    
+    public string PauseProcess() {
+        UserHandler userHandler = new UserHandler();
+        string user = userHandler.GetUser();
+        /*if (userHandler.IsUserAccepted(user)) {*/
+        if (true) {
+            try {
+                ScriptHandler scriptHandler = new ScriptHandler();
+                string scriptName = "pauseProcess";
+                return scriptHandler.ExecuteScript(scriptName);
+            }
+            catch (Exception e) {
+                Console.WriteLine(e);
+            }
+        }
+        return string.Empty;
+    }
 
     public string Backup() {
         UserHandler userHandler = new UserHandler();
@@ -52,7 +86,7 @@ public class SystemHandler : ISystemHandler {
         return string.Empty;
     }
 
-    public void Exit() {
-        throw new Exception("Saliendo del sistema...");
+    public string Exit() {
+        return "Saliendo del sistema...";
     }
 }
