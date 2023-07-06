@@ -35,7 +35,7 @@ public class SystemHandler : ISystemHandler {
         return string.Empty;
     }
     
-    public string KillProcess() {
+    public string KillProcess(string idProceso) {
         UserHandler userHandler = new UserHandler();
         string user = userHandler.GetUser();
         /*if (userHandler.IsUserAccepted(user)) {*/
@@ -43,7 +43,7 @@ public class SystemHandler : ISystemHandler {
             try {
                 ScriptHandler scriptHandler = new ScriptHandler();
                 string scriptName = "killProcess";
-                return scriptHandler.ExecuteScript(scriptName);
+                return scriptHandler.ExecuteScriptWParamIdProcess(scriptName, idProceso);
             }
             catch (Exception e) {
                 Console.WriteLine(e);
@@ -52,7 +52,7 @@ public class SystemHandler : ISystemHandler {
         return string.Empty;
     }
     
-    public string PauseProcess() {
+    public string PauseProcess(string idProceso) {
         UserHandler userHandler = new UserHandler();
         string user = userHandler.GetUser();
         /*if (userHandler.IsUserAccepted(user)) {*/
@@ -60,7 +60,7 @@ public class SystemHandler : ISystemHandler {
             try {
                 ScriptHandler scriptHandler = new ScriptHandler();
                 string scriptName = "pauseProcess";
-                return scriptHandler.ExecuteScript(scriptName);
+                return scriptHandler.ExecuteScriptWParamIdProcess(scriptName, idProceso);
             }
             catch (Exception e) {
                 Console.WriteLine(e);

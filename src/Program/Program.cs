@@ -7,7 +7,6 @@ class Program {
         SystemHandler systemHandler = new();
         string ando = systemHandler.ListUsers();
         Console.WriteLine(ando);
-        Console.WriteLine("HOLA HOLA HOLA");
         Console.ReadLine();
     }
 }
